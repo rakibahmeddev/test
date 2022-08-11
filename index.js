@@ -37,7 +37,7 @@ function publicBusFare(persons) {
 }
 
 function isBestFriend(friends1, friends2) {
-  if (friends1.name == friends2.friend || friends2.name == friends1.friend) {
+  if (friends1.name == friends2.friend && friends2.name == friends1.friend) {
     return true;
   } else {
     return false;
