@@ -1,4 +1,7 @@
 function radianToDegree(radian) {
+  if (typeof radian !== "number") {
+    return "Please enter a number";
+  }
   const degree = radian * 57.2958;
   const degreeDigit = degree.toFixed(2);
   return degreeDigit;
@@ -13,6 +16,13 @@ function isJavascriptFile(scripts) {
 }
 
 function oilPrice(dieselQty, petrolQty, octaneQty) {
+  if (
+    typeof dieselQty !== "number" ||
+    typeof petrolQty !== "number" ||
+    typeof octaneQty !== "number"
+  ) {
+    return "Please enter a number";
+  }
   const perLiterDieselRate = 114;
   const perLiterPetrolRate = 130;
   const perLiterOctaneRate = 135;
@@ -26,6 +36,9 @@ function oilPrice(dieselQty, petrolQty, octaneQty) {
 }
 
 function publicBusFare(persons) {
+  if (typeof persons !== "number") {
+    return "Please enter a number";
+  }
   const busTotalSit = 50;
   const microTotalSit = 11;
   const busSitRate = 250;
